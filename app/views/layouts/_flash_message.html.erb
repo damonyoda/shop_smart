@@ -1,0 +1,19 @@
+<div id="page-wrapper">
+            <div class="row">
+            <div class="col-lg-12" style="margin-top: 10px;">
+            <% if flash.any? %>
+              <% flash.each do |key, message| %>
+                <% if key == "notice" || key == "success" %>
+                   <div class="alert alert-info">
+                      <%= message %>
+                   </div>
+                <% elsif key == "error" || key == "warning" %>
+                   <div class="alert alert-danger">
+                      <%= message %>
+                   </div>
+                <% end %>
+              <% end %>
+            <% end %>
+            </div>
+          </div>
+          

@@ -1,0 +1,48 @@
+<%= form_for(@item) do |f| %>
+<%= render "devise/shared/error_messages", object: f.object %>
+
+  <div class="field">
+    <%= f.label :item_name %><br />
+    <%= f.text_field :item_name, autofocus: true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :item_info %><br />
+    <%= f.text_area :item_info %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :mall_name %><br />
+    <!--<#select_tag :mall, options_from_collection_for_select(Mall.all, "id", "mall_name") %>-->
+    <%= f.collection_select(:mall_name, Mall.all, :mall_name, :mall_name,  prompt: true) %>
+  </div>
+  
+    <div class="field">
+    <%= f.label :available_in %><br />
+    <%= f.text_field :available_in, placeholder: "Aeon, Watson or..."  %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :item_price %><br />
+    <%= f.number_field :item_price,  value: number_to_currency(f.object.item_price.to_f, delimiter: '', unit: ''), step: 0.01 %>
+  </div> 
+
+ <span class="picture">
+   <%= f.label :picture %>
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+  </span>
+<br>
+  <div class="actions">
+    <%= f.submit yield(:button_text) %>
+  </div>
+<% end %>
+  
+
+<script type="text/javascript">
+  $('#item_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>

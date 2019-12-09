@@ -1,0 +1,117 @@
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+           <!-- /.dropdown-messages -->
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="/items/new">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New item
+                                    <span class="pull-right text-muted small"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <!--<li class="divider"></li>-->
+                        <!--<li>-->
+                        <!--    <a href="#">-->
+                        <!--        <div>-->
+                        <!--            <i class="fa fa-twitter fa-fw"></i> 3 New Followers-->
+                        <!--            <span class="pull-right text-muted small">12 minutes ago</span>-->
+                        <!--        </div>-->
+                        <!--    </a>-->
+                        <!--</li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li>-->
+                        <!--    <a href="#">-->
+                        <!--        <div>-->
+                        <!--            <i class="fa fa-envelope fa-fw"></i> Message Sent-->
+                        <!--            <span class="pull-right text-muted small">4 minutes ago</span>-->
+                        <!--        </div>-->
+                        <!--    </a>-->
+                        <!--</li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li>-->
+                        <!--    <a href="#">-->
+                        <!--        <div>-->
+                        <!--            <i class="fa fa-tasks fa-fw"></i> New Task-->
+                        <!--            <span class="pull-right text-muted small">4 minutes ago</span>-->
+                        <!--        </div>-->
+                        <!--    </a>-->
+                        <!--</li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li>-->
+                        <!--    <a href="#">-->
+                        <!--        <div>-->
+                        <!--            <i class="fa fa-upload fa-fw"></i> Server Rebooted-->
+                        <!--            <span class="pull-right text-muted small">4 minutes ago</span>-->
+                        <!--        </div>-->
+                        <!--    </a>-->
+                        <!--</li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li>-->
+                        <!--    <a class="text-center" href="#">-->
+                        <!--        <strong>See All Alerts</strong>-->
+                        <!--        <i class="fa fa-angle-right"></i>-->
+                        <!--    </a>-->
+                        <!--</li>-->
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="<%= edit_user_registration_path %>"><i class="fa fa-gear fa-fw"></i> Edit Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="/users/sign_out" data-method= "delete"><i class="fa fa-gear fa-fw"></i> Sign out</a>
+                        <!-- link_to "Sign out", destroy_user_session_path, method: :delete -->
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul> 
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="/users"><i class="fa fa-dashboard fa-fw"></i> Users</a>
+                        </li>
+                        <li>
+                            <a href="/malls"><i class="fa fa-dashboard fa-fw"></i> Malls</a>
+                        </li>
+                        <li>
+                            <a href="/items"><i class="fa fa-dashboard fa-fw"></i> Items</a>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+            </nav>
